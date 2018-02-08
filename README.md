@@ -1,18 +1,15 @@
-AssimpAndroid
+# Assimp 4.1.0 Android Sample
 ===============
 
 In this project we load and render a 3D model using the [Open Asset Import Library](http://www.assimp.org) (aka Assimp).
-We will load a OBJ model, probably the simplest format for 3D models.
-
-A blog describing this project:
-http://www.anandmuralidhar.com/blog/android/assimp
+We will load a OBJ, GLTF model, probably the simplest format for 3D models.
 
 The project requires devices with ABI armeabi-v7a.
 
 License
 -------
 
-Copyright 2016 Anand Muralidhar
+Copyright 2018 Nishant Dande
 
 Licensed to the Apache Software Foundation (ASF) under one or more contributor
 license agreements.  See the NOTICE file distributed with this work for
@@ -28,3 +25,4 @@ distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
 WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
 License for the specific language governing permissions and limitations under
 the License.
+=======

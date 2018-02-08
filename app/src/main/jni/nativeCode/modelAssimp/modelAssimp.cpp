@@ -85,7 +85,7 @@ void ModelAssimp::PerformGLInits() {
 //            gHelperObject->ExtractAssetReturnFilename("gltf/sample/cube/Cube.bin", mtlFilename) &&
 //            gHelperObject->ExtractAssetReturnFilename("gltf/sample/cube/Cube_BaseColor.png", texFilename) &&
 //            gHelperObject->ExtractAssetReturnFilename("gltf/sample/cube/Cube_MetallicRoughness.png", texFilename1);
-    
+
         bool isFilesPresent  =
             gHelperObject->ExtractAssetReturnFilename("gltf/server/ge_new_gltf.gltf", objFilename) &&
             gHelperObject->ExtractAssetReturnFilename("gltf/server/ge_new_gltf.bin", mtlFilename) &&
