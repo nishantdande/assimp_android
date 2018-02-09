@@ -1,0 +1,567 @@
+{
+  "asset": {
+    "generator": "BabylonJS",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "byteLength": 37264,
+      "uri": "cube_gltf.bin"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "translation": [
+        9,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0.587780497585758,
+        0,
+        -0.8090204488502368
+      ],
+      "name": "Earth"
+    },
+    {
+      "mesh": 1,
+      "translation": [
+        -9,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0.587780497585758,
+        0,
+        -0.8090204488502368
+      ],
+      "name": "Dice"
+    },
+    {
+      "mesh": 2,
+      "translation": [
+        -7.746306880517237,
+        7.963418378014602,
+        -3.666627645492568
+      ],
+      "name": "15179206803998994"
+    },
+    {
+      "mesh": 3,
+      "translation": [
+        8.129315795788543,
+        9.356076662264556,
+        -4.000000000000007
+      ],
+      "name": "1517920696840649"
+    },
+    {
+      "mesh": 4,
+      "translation": [
+        6.530632743551555,
+        6.189489802274595,
+        7.7810204979397115
+      ],
+      "name": "15179207160816063"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 8,
+            "NORMAL": 9,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 2
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 12,
+            "NORMAL": 13,
+            "TEXCOORD_0": 14
+          },
+          "indices": 15,
+          "material": 3
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 16,
+            "NORMAL": 17,
+            "TEXCOORD_0": 18
+          },
+          "indices": 19,
+          "material": 4
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "scene": 0,
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 6492,
+      "name": "Position - Earth",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 6492,
+      "byteOffset": 6492,
+      "name": "Normal - Earth",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 4328,
+      "byteOffset": 12984,
+      "name": "TexCoord 0 - Earth",
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteLength": 11520,
+      "byteOffset": 17312,
+      "name": "Indices - Earth"
+    },
+    {
+      "buffer": 0,
+      "byteLength": 288,
+      "byteOffset": 28832,
+      "name": "Position - Dice",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 288,
+      "byteOffset": 29120,
+      "name": "Normal - Dice",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 192,
+      "byteOffset": 29408,
+      "name": "TexCoord 0 - Dice",
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteLength": 144,
+      "byteOffset": 29600,
+      "name": "Indices - Dice"
+    },
+    {
+      "buffer": 0,
+      "byteLength": 792,
+      "byteOffset": 29744,
+      "name": "Position - 15179206803998994",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 792,
+      "byteOffset": 30536,
+      "name": "Normal - 15179206803998994",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 528,
+      "byteOffset": 31328,
+      "name": "TexCoord 0 - 15179206803998994",
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1200,
+      "byteOffset": 31856,
+      "name": "Indices - 15179206803998994"
+    },
+    {
+      "buffer": 0,
+      "byteLength": 288,
+      "byteOffset": 33056,
+      "name": "Position - 1517920696840649",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 288,
+      "byteOffset": 33344,
+      "name": "Normal - 1517920696840649",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 192,
+      "byteOffset": 33632,
+      "name": "TexCoord 0 - 1517920696840649",
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteLength": 144,
+      "byteOffset": 33824,
+      "name": "Indices - 1517920696840649"
+    },
+    {
+      "buffer": 0,
+      "byteLength": 912,
+      "byteOffset": 33968,
+      "name": "Position - 15179207160816063",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 912,
+      "byteOffset": 34880,
+      "name": "Normal - 15179207160816063",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 608,
+      "byteOffset": 35792,
+      "name": "TexCoord 0 - 15179207160816063",
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteLength": 864,
+      "byteOffset": 36400,
+      "name": "Indices - 15179207160816063"
+    }
+  ],
+  "accessors": [
+    {
+      "name": "Position",
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 541,
+      "type": "VEC3",
+      "min": [
+        -5,
+        -5,
+        -5
+      ],
+      "max": [
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "name": "Normal",
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 541,
+      "type": "VEC3"
+    },
+    {
+      "name": "Texture Coords 0",
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 541,
+      "type": "VEC2"
+    },
+    {
+      "name": "Indices",
+      "bufferView": 3,
+      "componentType": 5125,
+      "count": 2880,
+      "type": "SCALAR"
+    },
+    {
+      "name": "Position",
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 24,
+      "type": "VEC3",
+      "min": [
+        -5,
+        -5,
+        -5
+      ],
+      "max": [
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "name": "Normal",
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 24,
+      "type": "VEC3"
+    },
+    {
+      "name": "Texture Coords 0",
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 24,
+      "type": "VEC2"
+    },
+    {
+      "name": "Indices",
+      "bufferView": 7,
+      "componentType": 5125,
+      "count": 36,
+      "type": "SCALAR"
+    },
+    {
+      "name": "Position",
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 66,
+      "type": "VEC3",
+      "min": [
+        -1.4265848100185394,
+        -1.5,
+        -1.3567628134504215
+      ],
+      "max": [
+        1.4265848100185394,
+        1.5,
+        1.3567628134504215
+      ]
+    },
+    {
+      "name": "Normal",
+      "bufferView": 9,
+      "componentType": 5126,
+      "count": 66,
+      "type": "VEC3"
+    },
+    {
+      "name": "Texture Coords 0",
+      "bufferView": 10,
+      "componentType": 5126,
+      "count": 66,
+      "type": "VEC2"
+    },
+    {
+      "name": "Indices",
+      "bufferView": 11,
+      "componentType": 5125,
+      "count": 300,
+      "type": "SCALAR"
+    },
+    {
+      "name": "Position",
+      "bufferView": 12,
+      "componentType": 5126,
+      "count": 24,
+      "type": "VEC3",
+      "min": [
+        -1.5,
+        -1.5,
+        -1.5
+      ],
+      "max": [
+        1.5,
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "name": "Normal",
+      "bufferView": 13,
+      "componentType": 5126,
+      "count": 24,
+      "type": "VEC3"
+    },
+    {
+      "name": "Texture Coords 0",
+      "bufferView": 14,
+      "componentType": 5126,
+      "count": 24,
+      "type": "VEC2"
+    },
+    {
+      "name": "Indices",
+      "bufferView": 15,
+      "componentType": 5125,
+      "count": 36,
+      "type": "SCALAR"
+    },
+    {
+      "name": "Position",
+      "bufferView": 16,
+      "componentType": 5126,
+      "count": 76,
+      "type": "VEC3",
+      "min": [
+        -1.5,
+        -1.5,
+        -1.5
+      ],
+      "max": [
+        1.5,
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "name": "Normal",
+      "bufferView": 17,
+      "componentType": 5126,
+      "count": 76,
+      "type": "VEC3"
+    },
+    {
+      "name": "Texture Coords 0",
+      "bufferView": 18,
+      "componentType": 5126,
+      "count": 76,
+      "type": "VEC2"
+    },
+    {
+      "name": "Indices",
+      "bufferView": 19,
+      "componentType": 5125,
+      "count": 216,
+      "type": "SCALAR"
+    }
+  ],
+  "materials": [
+    {
+      "name": "Anim_Earth_Cube_5.Earth",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.8170137383154773,
+          0.8170137383154773,
+          0.8170137383154773,
+          1
+        ],
+        "metallicFactor": 0.5920101245535949,
+        "roughnessFactor": 0.8046875,
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    },
+    {
+      "name": "Anim_Earth_Cube_5.Mat_Blender",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.8981091600652927,
+          0.8981091600652927,
+          0.8981091600652927,
+          1
+        ],
+        "metallicFactor": 0.5360623349656354,
+        "roughnessFactor": 0.8046875,
+        "baseColorTexture": {
+          "index": 1
+        }
+      }
+    },
+    {
+      "name": "ground",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.6342329219213244,
+          0.6342329219213244,
+          0.6342329219213244,
+          1
+        ],
+        "metallicFactor": 0.6058230480331134,
+        "roughnessFactor": 0.75
+      }
+    },
+    {
+      "name": "ground",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.6342329219213244,
+          0.6342329219213244,
+          0.6342329219213244,
+          1
+        ],
+        "metallicFactor": 0.6058230480331134,
+        "roughnessFactor": 0.75
+      }
+    },
+    {
+      "name": "ground",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.6342329219213244,
+          0.6342329219213244,
+          0.6342329219213244,
+          1
+        ],
+        "metallicFactor": 0.6058230480331134,
+        "roughnessFactor": 0.75
+      }
+    }
+  ],
+  "textures": [
+    {
+      "source": 0
+    },
+    {
+      "source": 1
+    }
+  ],
+  "images": [
+    {
+      "uri": "Earth Texture.jpg"
+    },
+    {
+      "uri": "Cube Texture.jpg"
+    }
+  ]
+}

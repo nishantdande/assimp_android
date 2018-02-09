@@ -227,7 +227,7 @@ bool AssimpLoader::LoadTexturesToGL(std::string modelFilename) {
 }
 
 /**
- * Loads a general OBJ with many meshes -- assumes texture is associated with each mesh
+ * Loads a general OBJ/GLTF with many meshes -- assumes texture is associated with each mesh
  * does not handle material properties (like diffuse, specular, etc.)
  */
 bool AssimpLoader::Load3DModel(std::string modelFilename) {
