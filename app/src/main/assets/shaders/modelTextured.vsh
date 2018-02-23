@@ -13,16 +13,19 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-
 // shader associated with AssimpLoader
 
 attribute   vec3 vertexPosition;
 attribute   vec2 vertexUV;
 varying     vec2 textureCoords;
 uniform     mat4 mvpMat;
+uniform     float isTexturePresent;
+
+varying float vs_isTexturePresent;
 
 void main()
 {
     gl_Position     = mvpMat * vec4(vertexPosition, 1.0);
     textureCoords   = vertexUV;
+    vs_isTexturePresent = isTexturePresent;
 }

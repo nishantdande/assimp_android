@@ -57,7 +57,7 @@ private:
 
     GLuint  vertexAttribute, vertexUVAttribute;     // attributes for shader variables
     GLuint  shaderProgramID;
-    GLint   mvpLocation, textureSamplerLocation;    // location of MVP in the shader
+    GLint   mvpLocation, textureSamplerLocation, isTexturePresentLocation;    // location of MVP in the shader
 };
 
 #endif //ASSIMPLOADER_H

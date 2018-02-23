@@ -36,6 +36,7 @@ AssimpLoader::AssimpLoader() {
     vertexUVAttribute       = GetAttributeLocation(shaderProgramID, "vertexUV");
     mvpLocation             = GetUniformLocation(shaderProgramID, "mvpMat");
     textureSamplerLocation  = GetUniformLocation(shaderProgramID, "textureSampler");
+    isTexturePresentLocation  = GetUniformLocation(shaderProgramID, "isTexturePresent");
 
     CheckGLError("AssimpLoader::AssimpLoader");
 }
@@ -297,6 +298,9 @@ void AssimpLoader::Render3DModel(glm::mat4 *mvpMat) {
         // Texture
         if (modelMeshes[n].textureIndex) {
             glBindTexture( GL_TEXTURE_2D, modelMeshes[n].textureIndex);
+            glUniform1f(isTexturePresentLocation, 1.0f);
+        } else{
+            glUniform1f(isTexturePresentLocation, 0.0f);
         }
 
         // Faces
@@ -307,10 +311,16 @@ void AssimpLoader::Render3DModel(glm::mat4 *mvpMat) {
         glEnableVertexAttribArray(vertexAttribute);
         glVertexAttribPointer(vertexAttribute, 3, GL_FLOAT, 0, 0, 0);
 
-        // Texture coords
-        glBindBuffer(GL_ARRAY_BUFFER, modelMeshes[n].textureCoordBuffer);
-        glEnableVertexAttribArray(vertexUVAttribute);
-        glVertexAttribPointer(vertexUVAttribute, 2, GL_FLOAT, 0, 0, 0);
+
+        if (modelMeshes[n].textureCoordBuffer) {
+            // Texture coords
+
+            glBindBuffer(GL_ARRAY_BUFFER, modelMeshes[n].textureCoordBuffer);
+            glEnableVertexAttribArray(vertexUVAttribute);
+            glVertexAttribPointer(vertexUVAttribute, 2, GL_FLOAT, 0, 0, 0);
+        } else{
+
+        }
 
         glDrawElements(GL_TRIANGLES, modelMeshes[n].numberOfFaces * 3, GL_UNSIGNED_INT, 0);
 
@@ -320,7 +330,7 @@ void AssimpLoader::Render3DModel(glm::mat4 *mvpMat) {
 
     }
 
-    CheckGLError("AssimpLoader::renderObject() ");
+//    CheckGLError("AssimpLoader::renderObject() ");
 
 }
 

@@ -16,12 +16,24 @@
 
 // shader associated with AssimpLoader
 
+
 precision mediump float; // required in GLSL ES 1.00
 
 varying vec2      textureCoords;
 uniform sampler2D textureSampler;
 
+varying float vs_isTexturePresent;
+
+
+
 void main()
 {
+
+    if(vs_isTexturePresent > 0.5)
+    {
     gl_FragColor.xyz = texture2D( textureSampler, textureCoords ).xyz;
+    }
+    else{
+        gl_FragColor.xyz = vec3(1.0, 1.0, 1.0);
+    }
 }

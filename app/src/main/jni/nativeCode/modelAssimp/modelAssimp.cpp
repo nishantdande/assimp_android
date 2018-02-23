@@ -86,16 +86,16 @@ void ModelAssimp::PerformGLInits() {
 //            gHelperObject->ExtractAssetReturnFilename("gltf/sample/cube/Cube_BaseColor.png", texFilename) &&
 //            gHelperObject->ExtractAssetReturnFilename("gltf/sample/cube/Cube_MetallicRoughness.png", texFilename1);
 
-    bool isFilesPresent  =
-            gHelperObject->ExtractAssetReturnFilename("gltf/sample/cube_earth/cube_gltf.gltf", objFilename) &&
-            gHelperObject->ExtractAssetReturnFilename("gltf/sample/cube_earth/cube_gltf.bin", mtlFilename) &&
-            gHelperObject->ExtractAssetReturnFilename("gltf/sample/cube_earth/Cube Texture.jpg", texFilename) &&
-            gHelperObject->ExtractAssetReturnFilename("gltf/sample/cube_earth/Earth Texture.jpg", texFilename1);
+//    bool isFilesPresent  =
+//            gHelperObject->ExtractAssetReturnFilename("gltf/sample/cube_earth/cube_gltf.gltf", objFilename) &&
+//            gHelperObject->ExtractAssetReturnFilename("gltf/sample/cube_earth/cube_gltf.bin", mtlFilename) &&
+//            gHelperObject->ExtractAssetReturnFilename("gltf/sample/cube_earth/Cube Texture.jpg", texFilename) &&
+//            gHelperObject->ExtractAssetReturnFilename("gltf/sample/cube_earth/Earth Texture.jpg", texFilename1);
 
-//        bool isFilesPresent  =
-//            gHelperObject->ExtractAssetReturnFilename("gltf/server/ge_new_gltf.gltf", objFilename) &&
-//            gHelperObject->ExtractAssetReturnFilename("gltf/server/ge_new_gltf.bin", mtlFilename) &&
-//            gHelperObject->ExtractAssetReturnFilename("gltf/server/GE_Machine_All_Texture.jpg", texFilename);
+        bool isFilesPresent  =
+            gHelperObject->ExtractAssetReturnFilename("gltf/server/ge_new_gltf.gltf", objFilename) &&
+            gHelperObject->ExtractAssetReturnFilename("gltf/server/ge_new_gltf.bin", mtlFilename) &&
+            gHelperObject->ExtractAssetReturnFilename("gltf/server/GE_Machine_All_Texture.jpg", texFilename);
 
 
 
