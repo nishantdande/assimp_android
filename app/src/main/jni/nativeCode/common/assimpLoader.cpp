@@ -38,6 +38,11 @@ AssimpLoader::AssimpLoader() {
     textureSamplerLocation  = GetUniformLocation(shaderProgramID, "textureSampler");
     isTexturePresentLocation  = GetUniformLocation(shaderProgramID, "isTexturePresent");
 
+    u_Light_Color = GetUniformLocation(shaderProgramID, "u_Light.Color");
+    u_Light_AmbientIntensity= GetUniformLocation(shaderProgramID, "u_Light.AmbientIntensity");
+    u_Light_DiffuseIntensity = GetUniformLocation(shaderProgramID, "u_Light.DiffuseIntensity");
+    u_Light_Direction = GetUniformLocation(shaderProgramID, "u_Light.Direction");
+
     CheckGLError("AssimpLoader::AssimpLoader");
 }
 
@@ -319,7 +324,10 @@ void AssimpLoader::Render3DModel(glm::mat4 *mvpMat) {
             glEnableVertexAttribArray(vertexUVAttribute);
             glVertexAttribPointer(vertexUVAttribute, 2, GL_FLOAT, 0, 0, 0);
         } else{
-
+            glUniform3f(u_Light_Color, 0.0f, 1.0f, 1.0f);
+            glUniform1f(u_Light_AmbientIntensity, 1.5f);
+            glUniform1f(u_Light_DiffuseIntensity, 0.7f);
+            glUniform3f(u_Light_Direction, 0.0f, 1.0f, -1.0f);
         }
 
         glDrawElements(GL_TRIANGLES, modelMeshes[n].numberOfFaces * 3, GL_UNSIGNED_INT, 0);

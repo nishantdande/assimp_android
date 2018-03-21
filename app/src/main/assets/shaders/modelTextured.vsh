@@ -22,10 +22,13 @@ uniform     mat4 mvpMat;
 uniform     float isTexturePresent;
 
 varying float vs_isTexturePresent;
+varying lowp vec3 frag_Normal;
 
 void main()
 {
     gl_Position     = mvpMat * vec4(vertexPosition, 1.0);
     textureCoords   = vertexUV;
     vs_isTexturePresent = isTexturePresent;
+
+    frag_Normal = (mvpMat * vec4(vertexPosition, 0.0)).xyz;
 }
