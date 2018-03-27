@@ -23,6 +23,7 @@ uniform     float isTexturePresent;
 
 varying float vs_isTexturePresent;
 varying lowp vec3 frag_Normal;
+varying lowp vec3 frag_Position;
 
 void main()
 {
@@ -31,4 +32,5 @@ void main()
     vs_isTexturePresent = isTexturePresent;
 
     frag_Normal = (mvpMat * vec4(vertexPosition, 0.0)).xyz;
+    frag_Position = (mvpMat * vec4(vertexPosition, 1.0)).xyz;
 }

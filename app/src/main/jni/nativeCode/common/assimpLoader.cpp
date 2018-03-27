@@ -42,6 +42,8 @@ AssimpLoader::AssimpLoader() {
     u_Light_AmbientIntensity= GetUniformLocation(shaderProgramID, "u_Light.AmbientIntensity");
     u_Light_DiffuseIntensity = GetUniformLocation(shaderProgramID, "u_Light.DiffuseIntensity");
     u_Light_Direction = GetUniformLocation(shaderProgramID, "u_Light.Direction");
+    u_Light_Shininess = GetUniformLocation(shaderProgramID, "u_Light.Shininess");
+    u_Light_SpecularIntensity = GetUniformLocation(shaderProgramID, "u_Light.SpecularIntensity");
 
     CheckGLError("AssimpLoader::AssimpLoader");
 }
@@ -328,6 +330,8 @@ void AssimpLoader::Render3DModel(glm::mat4 *mvpMat) {
             glUniform1f(u_Light_AmbientIntensity, 1.5f);
             glUniform1f(u_Light_DiffuseIntensity, 0.7f);
             glUniform3f(u_Light_Direction, 0.0f, 1.0f, -1.0f);
+            glUniform1f(u_Light_SpecularIntensity, 2.0f);
+            glUniform1f(u_Light_Shininess, 10.0f);
         }
 
         glDrawElements(GL_TRIANGLES, modelMeshes[n].numberOfFaces * 3, GL_UNSIGNED_INT, 0);

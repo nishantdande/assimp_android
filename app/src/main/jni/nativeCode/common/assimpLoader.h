@@ -59,6 +59,7 @@ private:
     GLuint  shaderProgramID;
     GLint   mvpLocation, textureSamplerLocation, isTexturePresentLocation;    // location of MVP in the shader
     GLint   u_Light_Color, u_Light_AmbientIntensity, u_Light_DiffuseIntensity, u_Light_Direction;    // Light and reflection in the shader
+    GLfloat  u_Light_Shininess, u_Light_SpecularIntensity;
 };
 
 #endif //ASSIMPLOADER_H

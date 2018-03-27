@@ -24,12 +24,15 @@ uniform sampler2D textureSampler;
 
 varying float vs_isTexturePresent;
 varying lowp vec3 frag_Normal;
+varying lowp vec3 frag_Position;
 
 struct Light {
     vec3 Color;
     float AmbientIntensity;
     float DiffuseIntensity;
     vec3 Direction;
+    float SpecularIntensity;
+    float Shininess;
 };
 
 uniform Light u_Light;
@@ -43,6 +46,8 @@ void main()
     gl_FragColor.xyz = texture2D( textureSampler, textureCoords ).xyz;
     }
     else{
+        //gl_FragColor.xyz = vec3(1.0, 1.0, 1.0);
+
         // Ambient
         lowp vec3 AmbientColor = u_Light.Color * u_Light.AmbientIntensity;
 
@@ -51,8 +56,14 @@ void main()
         lowp float DiffuseFactor = max(-dot(Normal, u_Light.Direction), 0.0);
         lowp vec3 DiffuseColor = u_Light.Color * u_Light.DiffuseIntensity * DiffuseFactor;
 
-        gl_FragColor = texture2D(textureSampler, textureCoords) * vec4((AmbientColor + DiffuseColor), 1.0);
+        //gl_FragColor = texture2D(textureSampler, textureCoords) * vec4((AmbientColor + DiffuseColor), 1.0);
 
-        //gl_FragColor.xyz = vec3(1.0, 1.0, 1.0);
+        // Specular
+        lowp vec3 Eye = normalize(frag_Position);
+        lowp vec3 Reflection = reflect(u_Light.Direction, Normal);
+        lowp float SpecularFactor = pow(max(0.0, -dot(Reflection, Eye)), u_Light.Shininess);
+        lowp vec3 SpecularColor = u_Light.Color * u_Light.SpecularIntensity * SpecularFactor;
+
+        gl_FragColor = texture2D(textureSampler, textureCoords) * vec4((AmbientColor + DiffuseColor + SpecularColor), 1.0);
     }
 }
